@@ -9,9 +9,7 @@ class GloryPracice(models.Model):
     age = models.IntegerField()  # 年龄
     sex = models.BooleanField()  # 性别
     glory_type = models.CharField(max_length=10)  # 英雄职业
-
-    def __str__(self):
-        return "英雄表"
+    Is_delete = models.BooleanField(default=False)  # 逻辑删除标记
 
 
 class GlorySkill(models.Model):
@@ -21,6 +19,5 @@ class GlorySkill(models.Model):
     skill_desc = models.CharField(max_length=1000)  # 技能描述
     glory = models.ForeignKey('GloryPracice')       # 关联英雄对象
 
-    def __str__(self):
-        return "技能表"
+
 

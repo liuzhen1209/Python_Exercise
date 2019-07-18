@@ -14,4 +14,5 @@ def index(request):
 def glorydetail(request, hid):
     h = GloryPracice.objects.get(id=hid)
     h1 = GloryPracice.objects.all()
-    return render(request, 'hero/glorydetail.html', {'h': h, 'h1': h1})
+    h2 = GlorySkill.objects.get(glory_id=hid)
+    return render(request, 'hero/glorydetail.html', {'h': h, 'h1': h1, 'h2': h2})

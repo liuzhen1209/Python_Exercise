@@ -5,8 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-    {% for hero in h1 %}
-        <li>{{ hero.name}}--{{ hero.age}}--{{ hero.sex}}--{{ hero.glory_type}}</li>
-    {% endfor %}
+<h1>详细信息</h1> <br/>
+<ul>
+        <li>姓名:{{ h.name}}<br/>
+            年龄:{{ h.age}}<br/>
+            职业:{{ h.glory_type}}<br/>
+            技能属性:{{h2.skill_type}}<br/>
+            技能名字:{{h2.skill_name}}<br/>
+            技能描述:{{h2.skill_desc}}<br/>
+        </li>
+</ul>
+
 </body>
 </html>
